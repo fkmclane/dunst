@@ -111,6 +111,7 @@ static void on_get_capabilities(GDBusConnection * connection,
         g_variant_builder_add(builder, "s", "actions");
         g_variant_builder_add(builder, "s", "body");
         g_variant_builder_add(builder, "s", "body-markup");
+        g_variant_builder_add(builder, "s", "persistence");
         value = g_variant_new("(as)", builder);
         g_variant_builder_unref(builder);
         g_dbus_method_invocation_return_value(invocation, value);
